@@ -7,7 +7,7 @@ Team members
 Project Manager
 Arnav Dogra  - dograarna@myvuw.ac.nz
 
-Architect
+Software Architect
 Jonanthan Hsu - hsuchun1@myvuw.ac.nz
  
 Tester
@@ -16,6 +16,18 @@ Ollie Ransom - ransomoliv@myvuw.ac.nz
 Coders:
 Zach Mclauchlan - mclauczach@myvuw.ac.nz
 Ricky Fong - fongrick@mvuw.ac.nz
+
+General Degisn of the software
+
+
+
+WHat actual programming would look like, how you appreach the hight level design
+Thinking about the genreal design of the program, classes, methods etc
+
+
+Roadmap
+|start date	   |     task description	   |         responsible  |       team member	| end date	   |     outcome|
+
 
 
 
