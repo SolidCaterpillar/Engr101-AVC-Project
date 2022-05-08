@@ -2,6 +2,26 @@
 
 AVC
 
+Team members
+
+Project Manager
+Arnav Dogra  - dograarna@myvuw.ac.nz
+
+Architect
+Jonanthan Hsu - hsuchun1@myvuw.ac.nz
+ 
+Tester
+Ollie Ransom - ransomoliv@myvuw.ac.nz
+
+Coders:
+Zach Mclauchlan - mclauczach@myvuw.ac.nz
+Ricky Fong - fongrick@mvuw.ac.nz
+
+
+
+
+
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
