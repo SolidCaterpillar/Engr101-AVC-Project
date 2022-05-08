@@ -1,6 +1,6 @@
 # ENGR101 - Project3 - AVC - Team 1
 
-AVC
+AVC - Project 3, Team 1
 
 Team members
 
@@ -26,8 +26,10 @@ Thinking about the genreal design of the program, classes, methods etc
 
 
 Roadmap
-|start date	   |     task description	   |         responsible  |       team member	| end date	   |     outcome|
-
+|start date	   |     task description	   |         responsible| team members	| end date	   |     outcome|
+|------|------|-------|------|-----|----|
+|10/5/22|Finish Core|Coders | Zach and Ricky| 18/5/22| Not yet|
+|------|------|-------|------|-----|----|
 
 
 
