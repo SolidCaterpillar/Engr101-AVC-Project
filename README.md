@@ -17,9 +17,11 @@ Coders:
 Zach Mclauchlan - mclauczach@myvuw.ac.nz
 Ricky Fong - fongrick@mvuw.ac.nz
 
-General Degisn of the software
+General Design of the software
 
+Have multiple methods
 
+Zone calculate error
 
 WHat actual programming would look like, how you appreach the hight level design
 Thinking about the genreal design of the program, classes, methods etc
@@ -28,8 +30,31 @@ Thinking about the genreal design of the program, classes, methods etc
 Roadmap
 |start date	   |     task description	   |         responsible| team members	| end date	   |     outcome|
 |------|------|-------|------|-----|----|
-|10/5/22|Finish Core|Coders | Zach and Ricky| 18/5/22| Not yet|
-|------|------|-------|------|-----|----|
+|9/5/22|Implement Code from lectures|Coders + Software Architect | Zach, Jono and Ricky| 13/5/22| Not Done Date completed = |
+|13/5/22|Test code to find errors|Tester|Ollie|15/5/22|Not Done Date COmpleted = |
+|15/5/22|Finish Core | Coders + Software Architect | Zach, Jono and Ricky|20/5/22|Not done - Date Completed =|
+
+CORE
+Complete init(construct a robot object with x, y direction)
+create maze
+
+//change direction of the robot through error checking
+void setDirection(direction, boo)
+
+
+
+
+//compare camera pixel to old
+boolean checkBlackline(x, y)
+
+//return rgb of the pixel
+Pixel get_camera_pixel(x, y)
+
+COMPLETETION
+checkDeadEnd()
+
+
+
 
 
 
