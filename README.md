@@ -30,14 +30,14 @@ Thinking about the genreal design of the program, classes, methods etc
 Roadmap
 |start date	   |     task description	   |         responsible| team members	| end date	   |     outcome|
 |------|------|-------|------|-----|----|
-|9/5/22|Implement Code from lectures|Coders + Software Architect | Zach, Jono and Ricky| 13/5/22| Not Done Date completed = |
-|13/5/22|Test code to find errors|Tester|Ollie|15/5/22|Not Done Date COmpleted = |
+|9/5/22|Implement Code from lectures|Coders + Software Architect | Zach, Jono and Ricky| 13/5/22| Not Done - Date Completed = |
+|13/5/22|Test code to find errors|Tester|Ollie|15/5/22|Not Done - Date Completed = |
 |15/5/22|Finish Core | Coders + Software Architect | Zach, Jono and Ricky|20/5/22|Not done - Date Completed =|
 |20/5/22|Completion | coders + Software  Architect |  Zach, Jono, ricky| 26/05/22|Not done - Date Completed =|
 |26/05/22|Testing |Tester|Ollie|26/05/2022|Note done - Date Commpleted = |
 |27/05/22|Feedback and improvements| Everyone| Zach, Jono, Ricky, Ollie  and Arnav| 28/05/22| Not done - Date Completed=|
 |29/05/22|Attempt Challenge| Coders + Software Architect | Zach, Jono, Ricky| 02/06/22|Not Done - Date Completed = |
-|03/06/22|Finalise| Everyone| Zach, Jono, Ricky, Ollie  and Arnav| 03/06/22|Date Completed = |
+|03/06/22|Finalise| Everyone| Zach, Jono, Ricky, Ollie  and Arnav| 03/06/22|Not Done - Date Completed = |
 |04/06/2022| Final agreement and Submission| Everyone|Zach, Jono, Ricky, Ollie  and Arnav| 04/06/22| Not Done - Date Completed = |
 
 
