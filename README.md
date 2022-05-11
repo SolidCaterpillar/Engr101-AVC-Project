@@ -19,9 +19,26 @@ Ricky Fong - fongrick@mvuw.ac.nz
 
 General Design of the software
 
-Have multiple methods
+Have multiple methods and classes
 
-Zone calculate error
+Three classes
+**Camera**
+Deals with all of the image processing
+-Checking for black line
+-Error calculation
+-Sends data to the motors for them to be adjusted
+-Intersection checking
+
+
+
+**Motor**
+- Changes the speeds, depending on the data from the camera class
+
+**Main AVC**
+-Gathers information from the  Camera and Motor classes 
+-Processes the logic  about the robot itself
+
+
 
 WHat actual programming would look like, how you appreach the hight level design
 Thinking about the genreal design of the program, classes, methods etc
