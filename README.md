@@ -72,14 +72,17 @@ Three classes
 #### Other notes about the general design of the software
 
 | AVCRobot |
+|------|------|
 |Variables| Int x, int y, double angle, int part, Motor motor, Camera camera |
 |Functions|	void core   void completion   void challenge   void canSeeLine   void reverseUntilSeeLine |
 
 | Motor |
+|------|------|
 | Variables	| Int speedright, int speedleft |
 | Functions	| double calculateSpeedright()   double calculateSpeedleft()   void setSpeedright()   void setSpeedleft()   void foward()   void reverse() |
 
 | Camera |
+|------|------|
 | Variables	| Double kp, double error, int num_black, int num_red, int num_blue, int num_green |
 | Functions	| bool noBlackpix()   double getLineErrorSignal()   double numBlackInImg()   double numRedInImg()   double numBlueInImg()   double numGreenInImg() |
 
