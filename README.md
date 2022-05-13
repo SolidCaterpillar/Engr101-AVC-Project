@@ -70,23 +70,11 @@ Three classes
 
 
 #### Other notes about the general design of the software
-CORE
-Complete init(construct a robot object with x, y direction)
-create maze
 
-//change direction of the robot through error checking
-void setDirection(direction, boo)
+|AVCRobot|
+|Variables| Int x, int y, double angle, int part|
+|Functions|	void core   void completion   void challenge   void canSeeLine   void reverseUntilSeeLine |
 
 
-
-
-//compare camera pixel to old
-boolean checkBlackline(x, y)
-
-//return rgb of the pixel
-Pixel get_camera_pixel(x, y)
-
-COMPLETETION
-checkDeadEnd()
 
 
