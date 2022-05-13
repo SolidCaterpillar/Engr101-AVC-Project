@@ -72,10 +72,8 @@ Three classes
 #### Other notes about the general design of the software
 
 | AVCRobot |
-|Variables| Int x, int y, double angle, int part |
+|Variables| Int x, int y, double angle, int part, Motor motor, Camera camera |
 |Functions|	void core   void completion   void challenge   void canSeeLine   void reverseUntilSeeLine |
-
-
 
 | Motor |
 | Variables	| Int speedright, int speedleft |
