@@ -1,0 +1,76 @@
+#include "images.h"
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+
+   // std::vector<int> a;
+
+    std::cout<<"start simulation..."<<std::endl;
+    //init(110,160,0*3.14159/180.0); // arguments - initial robot position, x,y,angle
+    init(110,200,0*3.14159/180.0);
+    update_sim(200); //redraw everything and pause for 300 milliseconds
+
+    //set_motors(20,20);
+
+    while(true){
+        update_sim(200);
+        //set_motors(20,20);
+        //int row = 0;
+        int num_black = 0;
+        double error = 0.0;
+        int vl,vr;
+        int vcr = 10;
+        int dv = 0;
+        double kp = 0.0025;
+
+        for (int col = 0; col < camera_image.width; col++){   //Loop through image
+
+            if (get_camera_pixel(camera_image.height/2, col, 3) < 100 )
+            {
+            num_black++;
+            error = error + (col - 50);
+
+
+            }
+        }
+        dv = error * kp;
+        vl = vcr + dv;
+        vr = vcr - dv;
+
+
+        if (num_black <= 5 && error >= 0 ){
+            set_motors(-10,0);
+            //set_motors(5,0);
+
+           std::cout <<"out of track"<<std::endl;
+
+        } if (num_black <= 5 && error <= 0 ){
+            set_motors(0,-10);
+
+        }
+            else if (error < - 700){
+
+            set_motors(vl,vr+3);
+
+            }
+            else if (error >  700){
+
+            set_motors(vl+3,vr);
+
+            }else set_motors(vl,vr);
+
+
+        std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+         std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+        //int dummy; std::cin>>dummy;
+
+    }
+    return 0;
+}
