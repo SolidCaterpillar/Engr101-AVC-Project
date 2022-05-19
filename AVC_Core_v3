@@ -1,0 +1,78 @@
+#include "images.h"
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <stdio.h>
+
+using namespace std;
+
+
+void core(){ // create void for core
+	int num_black = 0;
+	double error = 0.0;
+	int vl,vr;
+	int vcr = 15;
+	int dv = 0;
+	double kp = 0.0025;
+	int num_red = 0;
+
+
+
+	for (int col = 0; col < camera_image.width; col++){
+
+		if (get_camera_pixel(camera_image.height/2, col, 3) < 100 )
+		{
+			num_black++;
+			error = error + (col - 50);
+		}
+		if ((get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 1))&&get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 2))
+		{
+			num_red++;
+		}
+	}
+
+
+	dv = error * kp;
+	vl = vcr + dv;
+	vr = vcr - dv;
+
+
+	if (num_black <= 6 && error >=0 ){
+		set_motors(15,0);
+	}
+	else if (num_black <= 6 && error <= 0 ){
+		set_motors(0,15);
+	}
+	else if (error < -700){
+		set_motors(vl,vr+10);
+	}
+	else if (error >  700){
+		set_motors(vl+10,vr);
+	} 
+	else if (error == 0&&num_black <= 5){
+		set_motors(20,20);
+	}
+	else if (num_red>0){
+		set_motors(0,0);
+	}
+	else set_motors(vl,vr);
+
+	std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+	std::cout << "num of red: " << num_red <<std::endl;
+	std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+}
+
+
+int main()
+{
+    std::cout<<"start simulation..."<<std::endl;
+    init(110,160,15*3.14159/180.0);
+
+	while(true){
+		update_sim(300);
+		core();
+		update_sim(300);
+	}
+	return 0;
+}
