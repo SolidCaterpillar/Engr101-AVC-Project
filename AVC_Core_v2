@@ -1,0 +1,94 @@
+
+#include "images.h"
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <stdio.h>
+
+using namespace std;
+
+
+int main()
+{
+    std::cout<<"start simulation..."<<std::endl;
+    
+    init(110,160,15*3.14159/180.0); // testing the position given by the assignment 
+    
+    while(true){
+        update_sim(300);
+          int num_black = 0;
+        double error = 0.0;
+        int vl,vr;
+        int vcr = 15;
+        int dv = 0;
+        double kp = 0.0025;
+        int num_red = 0;
+
+
+
+        for (int col = 0; col < camera_image.width; col++){
+
+            if (get_camera_pixel(camera_image.height/2, col, 3) < 100 )
+            {
+            num_black++;
+            error = error + (col - 50);
+
+
+            }
+            if ((get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 1))&&get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 2))
+            {
+            num_red++;
+
+            }
+        }
+
+
+        dv = error * kp;
+        vl = vcr + dv;
+        vr = vcr - dv;
+
+
+        if (num_black <= 6 && error >=0 ){
+            set_motors(15,0); // change from negative to positve. Negative robot turn backward
+
+
+        } else if (num_black <= 6 && error <= 0 ){
+            set_motors(0,15); // change from negative to positve. Negative robot turn backward
+
+        }
+            else if (error < -700){
+
+            set_motors(vl,vr+10); // chagne from +3 to +10 to increase the turning speed 
+
+            }
+            else if (error >  700){
+
+            set_motors(vl+10,vr);
+
+        } else if (error == 0&&num_black <= 5){
+			
+            set_motors(20,20); // speed up if black line are in the middle of camera 
+
+            }
+
+
+        else if (num_red>0){ // when it detect red, the robot stops
+
+           set_motors(0,0);
+            }
+
+
+         else set_motors(vl,vr);
+
+
+
+        std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+        std::cout << "num of red: " << num_red <<std::endl; // checking the number of red 
+         std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+         update_sim(300); // add another update_sim to improve refreshing of the page
+}	
+      
+      return 0;
+    }
+
