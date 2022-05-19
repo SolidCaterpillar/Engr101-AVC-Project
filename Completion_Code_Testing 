@@ -1,0 +1,84 @@
+#include "images.h"
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <stdio.h>
+
+using namespace std;
+
+void completion(){
+	
+	int num_black = 0;
+	int num_Leftblack = 0;
+	int num_Rightblack = 0;
+	double error = 0.0;
+	int vl,vr;
+	int vcr = 15;
+	int dv = 0;
+	double kp = 0.0025;
+
+	for (int col = 0; col < camera_image.width; col++){
+	// detect black pixel on top side of the camera
+		if (get_camera_pixel(1, col, 3) < 100 )
+		{
+			num_black++;
+			error = error + (col - 50);
+		}
+	}
+        
+	for (int row = 0; row < camera_image.height; row++){
+	// detect black pixel on left side of the camera
+		if (get_camera_pixel(row, 1, 3) < 100 )
+		{
+			num_Leftblack++;
+		}
+	// detect black pixel on right side of the camera
+		if (get_camera_pixel(row, camera_image.height, 3) < 100 )
+		{     
+			num_Rightblack++;
+		}
+	}
+	dv = error * kp;
+	vl = vcr + dv;
+	vr = vcr - dv;
+        
+	if(num_black ==100){ // hard coded detecting cross intersection 
+		set_motors(0,100);
+	}
+	else if (error < -700){
+		set_motors(vl,vr+30);
+	}
+	else if (error >  700){
+		set_motors(vl+30,vr);
+	}
+	else if (num_Leftblack==0 &&num_Rightblack>0 &&num_black ==0){ // turning right when there no straight and left line 
+		set_motors(30,0);
+	}
+	else if (num_Leftblack>0 &&num_Rightblack==0 &&num_black ==0){ // turning left when there no straight and right line 
+		set_motors(0,30);
+	}
+	else if (num_black==90){ //hard coded detecting 2nd cross intersection
+		set_motors(vl+50,vr+50);
+	}
+	else if (num_black>0){ // going to straight 
+		set_motors(vl,vr);
+	}
+
+	std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+	std::cout << "num of left black: " << num_Leftblack <<std::endl;
+	std::cout << "num of right black: " << num_Rightblack <<std::endl;
+	std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+}
+
+int main()
+{
+    std::cout<<"start simulation..."<<std::endl;
+    init(1860,700,90*3.14159/180.0);
+    
+    while(true){
+		update_sim(500); // changing the update_sim to see if it affect the robot 
+		completion();
+    }
+    return 0;
+}
