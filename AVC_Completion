@@ -1,0 +1,159 @@
+#include "images.h"
+#include <fstream>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <stdio.h>
+
+using namespace std;
+
+int i = 0; // a global variable to increae the number when colour lane detected 
+
+void core(){
+         int num_black = 0;
+        double error = 0.0;
+        int vl,vr;
+        int vcr = 15;
+        int dv = 0;
+        double kp = 0.0025;
+        int num_red = 0;
+
+        for (int col = 0; col < camera_image.width; col++){
+
+            if (get_camera_pixel(camera_image.height/2, col, 3) < 100 )
+            {
+            num_black++;
+            error = error + (col - 50);
+
+			
+            }
+            if ((get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 1))&&get_camera_pixel(camera_image.height/2, col, 0) > 2*get_camera_pixel(camera_image.height/2, col, 2))
+            {
+            num_red++;
+
+            }
+        }
+    
+	dv = error * kp;
+	vl = vcr + dv;
+	vr = vcr - dv;
+
+	if (num_black <= 5 && error >=0 ){
+		set_motors(20,0);
+	} 
+	else if (num_black <= 5 && error <= 0 ){
+		set_motors(0,20);
+	}
+	else if (error < -700){
+		set_motors(vl,vr+10);
+	}
+	else if (error >  700){
+		set_motors(vl+10,vr);
+	}
+	 else if (error == 0&&num_black <= 5){
+		set_motors(20,20);
+	}
+	else if (num_red>0){ // when detect red lane add 1 
+		i = 1;
+		return; // send the value back to the global variable
+	}
+	else set_motors(vl,vr);
+        
+		std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+        std::cout << "num of red: " << num_red <<std::endl;
+        std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+}
+
+void completion(){
+	int num_black = 0;
+	int num_Leftblack = 0;
+	int num_Rightblack = 0;
+	double error = 0.0;
+
+	int vl,vr;
+	int vcr = 15;
+	int dv = 0;
+
+	double kp = 0.0025;
+	int num_blue = 0;
+
+	for (int col = 0; col < camera_image.width; col++){
+		// detect top of the camera
+		if (get_camera_pixel(1, col, 3) < 100 )
+		{
+		num_black++;
+		error = error + (col - 50);			
+		}
+		 if ((get_camera_pixel(1, col, 2) > 2*get_camera_pixel(1, col, 0))&&get_camera_pixel(1, col, 2) > 2*get_camera_pixel(1, col, 1))
+		{
+		num_blue++;
+		}
+	}
+	
+	for (int row = 0; row < camera_image.height; row++){
+		// detect left of the camera
+		if (get_camera_pixel(row, 1, 3) < 100 )
+		{
+			num_Leftblack++;
+		}
+		 if (get_camera_pixel(row, camera_image.height, 3) < 100 )
+		{
+			num_Rightblack++;		
+		}
+	}
+	
+        dv = error * kp;
+        vl = vcr + dv;
+        vr = vcr - dv;
+        
+	if (error < -700){
+		set_motors(vl,vr+10);
+	}
+	else if (error >  700){
+		set_motors(vl+10,vr);
+	}else if (num_Leftblack==0 &&num_Rightblack>0 &&num_black ==0){
+		set_motors(20,0);
+	}else if (num_Leftblack>0 &&num_Rightblack==0 &&num_black ==0){
+		set_motors(0,20);
+	}else if (num_Leftblack>0 &&num_Rightblack>0 &&num_black ==0){
+		set_motors(0,20);
+	}
+	else if (num_Leftblack==20 &&num_Rightblack==20 &&num_black ==20){
+		set_motors(vl,100);
+	}
+	else if (num_blue>0){ // when detect red lane add 2
+		i = 2;
+		return; // send the value back to the global variable
+	}
+	else if (num_black>0){
+		set_motors(vl,vr);
+	}		
+		
+		std::cout << "num of black: " << num_black << " error: " << error <<std::endl;
+        std::cout << "num of left black: " << num_Leftblack <<std::endl;
+        std::cout << "num of right black: " << num_Rightblack <<std::endl;
+        std::cout << "num of blue: " << num_blue <<std::endl;
+        std::cout << "dv: " << dv << " vl: " << vl << " vr:" << vr <<std::endl;
+}
+
+
+int main()
+{
+    std::cout<<"start simulation..."<<std::endl;
+    init(110,200,0*3.14159/180.0); // debugging position 
+
+	while(true){
+		update_sim(300);
+		if (i==0){
+			core();
+		}
+		else if (i == 1) {
+			completion();
+		}
+		else if (i == 2){
+			break; // break the loop when robot reach blue lane
+		}
+		update_sim(300);
+	}
+	return 0;
+}
