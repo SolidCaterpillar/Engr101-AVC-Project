@@ -26,7 +26,7 @@ As a result, this highlights the lack of communication among team members regard
 
 Few Bottlenecks and Solutions
 
-1.For core, the software engineers and software architect had to calculate values of the robot’s trajectory and make sure that it follows the correct path. There was a challenged faced in calculating the values required for error correction (Double kp). It was difficult to make estimate of a number that had to be multiplied with the “error” variable.
+1. For core, the software engineers and software architect had to calculate values of the robot’s trajectory and make sure that it follows the correct path. There was a challenged faced in calculating the values required for error correction (Double kp). It was difficult to make estimate of a number that had to be multiplied with the “error” variable.
 For example:(dv = kp*error) → 5*100 =500 for dv then add vcr 10 is 510 for vl (vl = dv+vcr) and 500 for vr by 500 - 10 (vr = dv-vcr)
 To resolve the issues, we have to do multiple tries and errors testing the code to find the optimal number which turns out the kp is
 0.0025 a very small number. Multiply by 100 give dv = 0.25 (0.0025*100) then add/subtract vcr
