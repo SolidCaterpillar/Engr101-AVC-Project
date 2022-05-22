@@ -44,5 +44,5 @@ The final solution  turned out,creating a boolean in int main(), put in completi
 
 Team recommendation on how to advance the Project:
 
-So far the coding side of the project is going up to the mark. We need to keep up the good work and try to finish code for challenge as early as possible so that it is not  messed up in the end under pressure. Even though the code has been tested by the software engineers and software architect, the tester also needs to perform the assigned tasks. Another aspect to imporve is communication between team members regarding the project. 
+So far the coding side of the project is going up to the mark. We need to keep up the good work and try to finish code for challenge as early as possible so that it is not  messed up in the end under pressure. Even though the code has been tested by the software engineers and software architect, the tester also needs to perform the assigned tasks. Another aspect to improve is communication between team members regarding the project. 
 
