@@ -36,6 +36,6 @@ To resolve the issues, we have to do multiple tries and errors testing the code 
 but there was a dead end as there no black track left. We tried to make a robot go reverse by negative set_motor(-100,-100) when top, left and right did not track any black. This didn’t work out. The robot kept turning left because top, left and right detected black pixels.
 To solve this issue , we created a variable “check” = 0 as a global variable that adds 1 when detecting the 1st cross intersection then when the robot reaches the 2nd cross intersection and checks have 1, it goes straight. This however does not work because of the while loop, which loops the whole statement meaning that it reuses the “check” variable that creates it which is 0
 in every loop. 
-The final solution  turned out,creating a boolean in int main(), put in completion parameter and change void completion to bool completion
+The final solution  turned out,creating a boolean in int main(), put in completion parameter and change void completion to bool completion. (image below)
 
-![](https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/blob/main/a.png)
+![For completion](/a.png)
