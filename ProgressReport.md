@@ -38,4 +38,4 @@ To solve this issue , we created a variable “check” = 0 as a global variable
 in every loop. 
 The final solution  turned out,creating a boolean in int main(), put in completion parameter and change void completion to bool completion
 
-
+![](https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/blob/main/a.png)
