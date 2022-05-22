@@ -2,7 +2,7 @@
 ## Progress Report 
 
 #### Progress Roadmap
-|start date	   |     task description	   |         responsible| team members	| end date	   |     outcome|Actual progress as per 22 of May|
+|start date	   |     task description	   |         responsible| team members	| end date	   |     outcome|Actual progress as per 22nd of May|
 |------|------|-------|------|-----|----|----|
 |9/5/22|Implement Code from lectures|Software Engineers + Software Architect | Zach, Jono and Ricky| 13/5/22| Date Completed = 13/5/22 | **Done as scheduled**  |
 |13/5/22|Test code to find errors|Tester|Ollie|15/5/22|Date Completed = | Still not done|
@@ -39,3 +39,11 @@ in every loop.
 The final solution  turned out,creating a boolean in int main(), put in completion parameter and change void completion to bool completion. (image below)
 
 ![For completion](/a.png)
+
+
+
+
+Team recommendation on how to advance the Project:
+
+So far the coding side of the project is going up to the mark. We need to keep up the good work and try to finish code for challenge as early as possible so that it is not  messed up in the end under pressure. Even though the code has been tested by the software engineers and software architect, the tester also needs to perform the assigned tasks. Another aspect to imporve is communication between team members regarding the project. 
+
