@@ -10,6 +10,7 @@ using namespace std;
 int i = 0; // number of colour lane pass 
 double kp = 0.0025; // estimation of multiply the error 
 int vcr = 15; // speed of left and right motor going forward
+bool isComplete = false;
 
 // function for core to create a camera detection to move the robot 
 void core(){
@@ -202,7 +203,8 @@ void challenge(){
         vr = vcr - dv;
 
        if (num_green>=70){ 		// if detect green pixel, make robot stop 
-			set_motors(0,0);   
+			set_motors(0,0); 
+			isComplete = true;  
         }
         else { 
 			if (error < -700){
@@ -244,7 +246,7 @@ int main()
     init(110,160,15*3.14159/180.0);
 
     bool check = false; // checking for cross intersection
-    while(true){ 
+    while(!isComplete){ 
    
 		update_sim(300);
         
