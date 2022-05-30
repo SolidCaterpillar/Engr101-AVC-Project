@@ -33,7 +33,7 @@ maze.txt: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr
 2. Once all of these files are in the same folder, open your prefered IDE (Geeny, Visual Studio, etc)
 3. Make sure you have a relevant c++ compiler on you computer (gcc, g++, etc).
 4. Open the project folder in which you saved all of the .h and .cpp and .html files
-5. Open display_scene.html in your chosen browser, this will display the robot and the maze.
+5. Open display_scene.html in your chosen browser, this will display the robot and the maze( once compiled m1.bmp and m2.bmp are generated and can be viewed using your chosen IDE if it is supported).
 6. Compile/build/run AVC_Challenge_Final.cpp in your chosen IDE
 7. The program should now be running, go back to the display_scene.html and watch the robot navigate the maze!
 
