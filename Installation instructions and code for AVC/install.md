@@ -23,7 +23,7 @@ display_scene.html:https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project
 
 
 2. Once all of these files are in the same folder, open your prefered IDE (Geeny, Visual Studio, etc)
-3. Make sure you have a relevant gcc c++ compiler on you computer.
+3. Make sure you have a relevant c++ compiler on you computer (gcc, g++, etc).
 4. Open the project folder in which you saved all of the .h and .cpp and .html files
 5. Open display_scene.html in your chosen browser, this will display the robot and the maze.
 6. Compile/build/run AVC_Challenge_Final.cpp in your chosen IDE
