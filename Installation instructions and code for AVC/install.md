@@ -12,13 +12,13 @@ display_scene.html<br>
 1. Download geom., images.h, robot.h, AVC_Challenge_Final.cpp  and  display_scene.html and put them in the same folder on your computer
 
 **Download links to the files:<br>**
-geom.h : https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Install/geom.h?inline=false<br>
-images.h: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Install/images.h?inline=false<br>
-robot.h: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Install/robot.h?inline=false
+geom.h : https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/geom.h?inline=false<br>
+images.h: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/images.h?inline=false<br>
+robot.h: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/robot.h?inline=false
 
-AVC_Challenge_Final.cpp: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/blob/main/Install/AVC_Challenge_Final.cpp<br>
+AVC_Challenge_Final.cpp: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/AVC_Challenge_Final.cpp?inline=false<br>
 
-display_scene.html:https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Install/display_scene.html?inline=false<br>
+display_scene.html:https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/display_scene.html?inline=false<br>
 
 
 
