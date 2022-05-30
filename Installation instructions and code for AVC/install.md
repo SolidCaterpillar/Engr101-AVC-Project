@@ -7,9 +7,12 @@ geom.h, images.h, robot.h <br>
 AVC_Challenge_Final.cpp<br>
 **Files to see the AVC maze and robot<br>**
 display_scene.html<br>
+Files for the maze
+table.bmp
+maze.txt
 
 **All of these files need to be in the same folder.**
-1. Download geom., images.h, robot.h, AVC_Challenge_Final.cpp  and  display_scene.html and put them in the same folder on your computer
+1. Download geom., images.h, robot.h, AVC_Challenge_Final.cpp, display_scene.html, table.bmp and maze.txt and put them in the same folder on your computer
 
 **Download links to the files:<br>**
 geom.h : https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/geom.h?inline=false<br>
@@ -19,6 +22,11 @@ robot.h: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr1
 AVC_Challenge_Final.cpp: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/AVC_Challenge_Final.cpp?inline=false<br>
 
 display_scene.html:https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/display_scene.html?inline=false<br>
+
+table.bmp: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/table.bmp?inline=false<br>
+
+maze.txt: https://gitlab.ecs.vuw.ac.nz/course-work/engr101/2022/project3/t1/engr101-project3-avc-team-1/-/raw/main/Installation%20instructions%20and%20code%20for%20AVC/maze.txt?inline=false<br>
+
 
 
 
